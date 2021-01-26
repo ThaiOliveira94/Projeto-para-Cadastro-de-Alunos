@@ -16,6 +16,9 @@ namespace revisap
                 {
                     case "1":
                         // TODO: add alunos
+                        Console.Clear();
+                        Console.WriteLine($"Obrigado sua opçaõ desejada foi a : {"1"}");
+                        Console.WriteLine();
                         Console.WriteLine("Informe o nome do aluno:");
                         var aluno = new Aluno();
                         aluno.Nome = Console.ReadLine();
@@ -32,20 +35,27 @@ namespace revisap
                         }
                         alunos[indiceAluno] = aluno;
                         indiceAluno++;
+                        Console.Clear();
                         break;
 
                     case "2":
                         // TODO: listar alunos
+                        Console.Clear();
+                        Console.WriteLine();
+                        Console.WriteLine("Essa e a lista de alunos cadastrada");
+                        Console.WriteLine();
                         foreach (var a in alunos)
 
                             if (!string.IsNullOrEmpty(a.Nome))
                             {
                                 Console.WriteLine($"Aluno: {a.Nome} - Nota: {a.Nota}");
                             }
+
                         break;
 
                     case "3":
                         // TODO: calcular a media geral dos alunos
+                        Console.WriteLine();
                         decimal notaTotal = 0;
                         var nrAlunos = 0;
 
@@ -81,8 +91,12 @@ namespace revisap
                         {
                             conceitoGeral = Conceito.A;
                         }
-                        Console.WriteLine($"Media Geral : {MediaGeral} - Conceito : {conceitoGeral}");
-
+                        Console.Clear();
+                        Console.WriteLine("Abaixo temos a Media geral dos Alunos, e o conceito");
+                        Console.WriteLine();
+                        Console.WriteLine($"Media Geral : {MediaGeral}");
+                        Console.WriteLine();
+                        Console.WriteLine($"Conceito : {conceitoGeral}");
                         break;
 
                     default:
